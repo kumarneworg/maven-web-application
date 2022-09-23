@@ -21,7 +21,7 @@ options {
 stages{
 stage(codecheckout){
 steps{
- git branch:"${params.branchname}", git credentialsId: 'a9f3eb10-0ab8-4628-8e70-fd1d3545e889', url: 'https://github.com/kumarneworg/maven-web-application.git'
+ git credentialsId: 'a9f3eb10-0ab8-4628-8e70-fd1d3545e889', url: 'https://github.com/kumarneworg/maven-web-application.git'
 }
 }
 stage('bulding the code'){
