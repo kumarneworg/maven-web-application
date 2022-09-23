@@ -36,7 +36,7 @@ stage('running the to container'){
 steps{
 sshagent(['c300ea02-62c8-42d8-896b-989f591cffac']){
      sh "ssh -o StrictHostKeyChecking=no ubuntu@65.2.10.0 docker rm -65.2.10.0f dcimagecon || true"
-     sh "ssh -o StrictHostKeyChecking=no ubuntu@65.2.10.0 docker run -d -p 6680:8080 --name DCIMAGECON naveenkuamr/dcimage:${BUILD_NUMBER}"
+     sh "ssh -o StrictHostKeyChecking=no ubuntu@65.2.10.0 docker run -d -p 6680:8080 --name dcimagecon naveenkuamr/dcimage:${BUILD_NUMBER}"
 }
 }
 }
