@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: java-web-application
-    image: naveenkuamr/webapps:tag
+    image: naveenkuamr/m-w-application:tag
     ports:
     - containerPort: 8080
 ---
