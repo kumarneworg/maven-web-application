@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkins
+  namespace: login
+  labels:
+    name: jenkinslabel
+spec:
+  containers:
+  - name: jenkinscontainer
+    image: jenkins/jenkins:lts
+    ports:
+    - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkinssvc
+  namespace: login
+spec:
+  type: NodePort 
+  selector:
+    name: jenkinslabel
+  ports:
+  - port: 80
+    targetPort: 8080
